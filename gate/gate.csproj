@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD0E1DB6-9A7B-4615-8E06-D139B5790118}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gate</RootNamespace>
+    <AssemblyName>gate</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBAccess.cs" />
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update.Designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityOfficerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityOfficerHome.Designer.cs">
+      <DependentUpon>SecurityOfficerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityOfficerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityOfficerSettings.Designer.cs">
+      <DependentUpon>SecurityOfficerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityOfficerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityOfficerUpdate.Designer.cs">
+      <DependentUpon>SecurityOfficerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityOfficerUpdateBySO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityOfficerUpdateBySO.Designer.cs">
+      <DependentUpon>SecurityOfficerUpdateBySO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniversityOfficerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UniversityOfficerHome.Designer.cs">
+      <DependentUpon>UniversityOfficerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleSearch.Designer.cs">
+      <DependentUpon>VehicleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleSettings.Designer.cs">
+      <DependentUpon>VehicleSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleUpdate.Designer.cs">
+      <DependentUpon>VehicleUpdate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOut.resx">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SecurityOfficerHome.resx">
+      <DependentUpon>SecurityOfficerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityOfficerSettings.resx">
+      <DependentUpon>SecurityOfficerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityOfficerUpdate.resx">
+      <DependentUpon>SecurityOfficerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityOfficerUpdateBySO.resx">
+      <DependentUpon>SecurityOfficerUpdateBySO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UniversityOfficerHome.resx">
+      <DependentUpon>UniversityOfficerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleSearch.resx">
+      <DependentUpon>VehicleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleSettings.resx">
+      <DependentUpon>VehicleSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleUpdate.resx">
+      <DependentUpon>VehicleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
